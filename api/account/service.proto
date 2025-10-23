@@ -15,5 +15,5 @@ message GetAccountByIdRequest {
 }
 
 message GetAccountByIdResponse {
-  accountmodelspb.Account account = 1;
+  accountmodelspb.Account account = 1; // <- использовать псевдоним
 }
