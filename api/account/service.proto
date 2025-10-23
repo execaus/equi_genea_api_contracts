@@ -8,6 +8,7 @@ import "api/account/models.proto";
 
 service AccountService {
   rpc GetAccountById(GetAccountByIdRequest) returns (GetAccountByIdResponse);
+  rpc CreateAccount(CreateAccountRequest) returns (CreateAccountResponse)
 }
 
 message GetAccountByIdRequest {
@@ -15,5 +16,13 @@ message GetAccountByIdRequest {
 }
 
 message GetAccountByIdResponse {
+  models.Account account = 1;
+}
+
+message CreateAccountRequest {
+  string email = 1;
+}
+
+message CreateAccountResponse {
   models.Account account = 1;
 }
