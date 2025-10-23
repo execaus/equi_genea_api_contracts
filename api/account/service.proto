@@ -2,8 +2,6 @@ syntax = "proto3";
 
 package account;
 
-option go_package = "api/account;account";
-
 import "api/account/models/account.proto";
 
 service AccountService {

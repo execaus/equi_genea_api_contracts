@@ -4,8 +4,6 @@ package models;
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "api/account/models;models";
-
 message Account {
   string id = 1;
   string email = 2;
