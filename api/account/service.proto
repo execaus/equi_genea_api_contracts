@@ -4,7 +4,7 @@ package account;
 
 option go_package = "api/account;account";
 
-import "api/account/models/account.proto";
+import "api/account/account.proto";
 
 service AccountService {
   rpc GetAccountById(GetAccountByIdRequest) returns (GetAccountByIdResponse);
