@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package account;
 
-option go_package = "github.com/execaus/equi_genea_api_contracts/api/account;account";
+option go_package = "api/account/models;models";
 
 import "api/account/models/account.proto";
 
