@@ -8,7 +8,7 @@ import "api/account/models.proto";
 
 service AccountService {
   rpc GetAccountById(GetAccountByIdRequest) returns (GetAccountByIdResponse);
-  rpc CreateAccount(CreateAccountRequest) returns (CreateAccountResponse)
+  rpc CreateAccount(CreateAccountRequest) returns (CreateAccountResponse);
 }
 
 message GetAccountByIdRequest {
