@@ -1,0 +1,1 @@
+module github.com/execaus/equi_genea_api_contracts
