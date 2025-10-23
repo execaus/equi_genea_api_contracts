@@ -4,7 +4,7 @@ package account;
 
 import "api/account/models/account.proto";
 
-option go_package = "equi_genea_account_service/internal/pb/api/account";
+option go_package = "api/account";
 
 service AccountService {
   rpc GetAccountById(GetAccountByIdRequest) returns (GetAccountByIdResponse);
