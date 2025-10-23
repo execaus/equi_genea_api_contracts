@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package github.com.execaus.equi.genea.api.contracts.account;
+package account;
 
 import "api/account/models/account.proto";
 
-option go_package = "github.com/execaus/equi_genea_account_service/internal/pb/api/account:accountpb";
+option go_package = "equi_genea_account_service/internal/pb/api/account";
 
 service AccountService {
   rpc GetAccountById(GetAccountByIdRequest) returns (GetAccountByIdResponse);
@@ -15,5 +15,5 @@ message GetAccountByIdRequest {
 }
 
 message GetAccountByIdResponse {
-  github.com.execaus.equi.genea.api.contracts.account.models.Account account = 1;
+  models.Account account = 1;
 }
