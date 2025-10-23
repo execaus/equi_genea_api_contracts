@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package account;
 
-import "api/account/models/account.proto";
+option go_package = "github.com/execaus/equi_genea_api_contracts/api/account;account";
 
-option go_package = "equi_genea_api_contracts/api/account;account";
+import "api/account/models/account.proto";
 
 service AccountService {
   rpc GetAccountById(GetAccountByIdRequest) returns (GetAccountByIdResponse);
