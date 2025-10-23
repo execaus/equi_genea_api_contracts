@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package account;
+
+import "api/account/models/account.proto";
+
+option go_package = "equi_genea_api_contracts/api/account_pb;account_pb";
+
+service AccountService {
+  rpc GetAccountById(GetAccountByIdRequest) returns (GetAccountByIdResponse);
+}
+
+message GetAccountByIdRequest {
+  string id = 1;
+}
+
+message GetAccountByIdResponse {
+  account_models.Account account = 1;
+}
