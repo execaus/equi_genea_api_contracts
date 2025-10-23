@@ -4,7 +4,7 @@ package account_models;
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "equi_genea_api_contracts/account_models_pb;account_models_pb";
+option go_package = "equi_genea_api_contracts/accountmodelspb;accountmodelspb";
 
 message Account {
   string id = 1;
