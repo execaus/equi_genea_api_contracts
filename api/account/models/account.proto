@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package account_models;
+package accountmodelspb;
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "equi_genea_api_contracts/accountmodelspb;accountmodelspb";
+option go_package = "github.com/execaus/equi_genea_api_contracts/api/accountmodelspb";
 
 message Account {
   string id = 1;
