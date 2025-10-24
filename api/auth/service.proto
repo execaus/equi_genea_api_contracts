@@ -12,7 +12,7 @@ service AuthService {
   rpc GenerateToken(GenerateTokenRequest) returns (GenerateTokenResponse);
   rpc HashPassword(HashPasswordRequest) returns (HashPasswordResponse);
   rpc GeneratePassword(google.protobuf.Empty) returns (GeneratePasswordResponse);
-  rpc GetClaimsFromToken(GetClaimsFromTokenRequest) returns (GetClaimsFromTokenResponse)
+  rpc GetClaimsFromToken(GetClaimsFromTokenRequest) returns (GetClaimsFromTokenResponse);
 }
 
 message GenerateTokenRequest {
