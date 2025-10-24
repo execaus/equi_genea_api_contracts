@@ -23,7 +23,8 @@ message GetAccountByIdResponse {
 
 message CreateAccountRequest {
   string email = 1;
-  string passwordHash = 2;
+  string password = 2;
+  string passwordHash = 3;
 }
 
 message CreateAccountResponse {
