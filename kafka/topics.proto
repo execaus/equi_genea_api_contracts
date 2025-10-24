@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package kafka;
+
+import "kafka/messages.proto";
+
+option go_package = "kafka;kafka";
+
+// Enum для названий топиков Kafka
+enum KafkaTopic {
+  ACCOUNT_CREATION = 0;
+  ACCOUNT_ACTIVITY = 1;
+}
+
+// Универсальный контейнер для отправки сообщений
+message KafkaMessage {
+  KafkaTopic topic = 1;
+
+  oneof payload {
+    AccountCreationEvent account_creation = 2;
+    AccountActivityEvent account_activity = 3;
+  }
+}

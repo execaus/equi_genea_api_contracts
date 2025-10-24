@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package kafka;
+
+option go_package = "kafka;kafka";
+
+// Сообщение для топика ACCOUNT_CREATION
+message AccountCreationEvent {
+  string account_id = 1;
+  string password = 2;
+}
+
+// Сообщение для топика ACCOUNT_ACTIVITY
+message AccountActivityEvent {
+  string account_id = 1;
+}
