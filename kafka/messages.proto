@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package kafka;
 
-option go_package = "kafka;kafka";
+option go_package = "equi_genea_api_contracts/kafka;kafka";
 
 // Сообщение для топика ACCOUNT_CREATION
 message AccountCreationEvent {

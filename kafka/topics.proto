@@ -4,7 +4,7 @@ package kafka;
 
 import "kafka/messages.proto";
 
-option go_package = "kafka;kafka";
+option go_package = "equi_genea_api_contracts/kafka;kafka";
 
 // Enum для названий топиков Kafka
 enum KafkaTopic {
