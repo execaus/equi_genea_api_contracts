@@ -13,6 +13,7 @@ service AuthService {
   rpc HashPassword(HashPasswordRequest) returns (HashPasswordResponse);
   rpc GeneratePassword(google.protobuf.Empty) returns (GeneratePasswordResponse);
   rpc GetClaimsFromToken(GetClaimsFromTokenRequest) returns (GetClaimsFromTokenResponse);
+  rpc ComparePassword(ComparePasswordRequest) returns (ComparePasswordResponse);
 }
 
 message GenerateTokenRequest {
@@ -41,4 +42,13 @@ message GetClaimsFromTokenRequest {
 
 message GetClaimsFromTokenResponse {
   models.AuthClaims claims = 1;
+}
+
+message ComparePasswordRequest {
+  string hashedPassword = 1;
+  string password = 2;
+}
+
+message ComparePasswordResponse {
+  bool is_match = 1;
 }
