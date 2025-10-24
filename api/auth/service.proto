@@ -6,10 +6,13 @@ import "google/protobuf/empty.proto";
 
 option go_package = "api/auth;auth";
 
+import "api/auth/models.proto";
+
 service AuthService {
   rpc GenerateToken(GenerateTokenRequest) returns (GenerateTokenResponse);
   rpc HashPassword(HashPasswordRequest) returns (HashPasswordResponse);
   rpc GeneratePassword(google.protobuf.Empty) returns (GeneratePasswordResponse);
+  rpc GetClaimsFromToken(GetClaimsFromTokenRequest) returns (GetClaimsFromTokenResponse)
 }
 
 message GenerateTokenRequest {
@@ -30,4 +33,12 @@ message HashPasswordResponse {
 
 message GeneratePasswordResponse {
   string password = 1;
+}
+
+message GetClaimsFromTokenRequest {
+  string token = 1;
+}
+
+message GetClaimsFromTokenResponse {
+  models.AuthClaims claims = 1;
 }
