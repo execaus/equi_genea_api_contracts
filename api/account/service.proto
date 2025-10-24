@@ -8,6 +8,7 @@ import "api/account/models.proto";
 
 service AccountService {
   rpc GetAccountById(GetAccountByIdRequest) returns (GetAccountByIdResponse);
+  rpc GetAccountByEmail(GetAccountByEmailRequest) returns (GetAccountByEmailResponse);
   rpc CreateAccount(CreateAccountRequest) returns (CreateAccountResponse);
   rpc IsExistByEmail(IsExistByEmailRequest) returns (IsExistByEmailResponse);
 }
@@ -35,4 +36,12 @@ message IsExistByEmailRequest {
 
 message IsExistByEmailResponse {
   bool isExist = 1;
+}
+
+message GetAccountByEmailRequest {
+  string email = 1;
+}
+
+message GetAccountByEmailResponse {
+  models.Account account = 1;
 }
