@@ -6,6 +6,7 @@ option go_package = "api/auth;auth";
 
 service AuthService {
   rpc GenerateToken(GenerateTokenRequest) returns (GenerateTokenResponse);
+  rpc HashPassword(HashPasswordRequest) returns (HashPasswordResponse);
 }
 
 message GenerateTokenRequest {
@@ -13,5 +14,13 @@ message GenerateTokenRequest {
 }
 
 message GenerateTokenResponse {
-  string token = 2;
+  string token = 1;
+}
+
+message HashPasswordRequest {
+  string password = 1;
+}
+
+message HashPasswordResponse {
+  string hash = 1;
 }
