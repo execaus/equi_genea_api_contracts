@@ -25,6 +25,7 @@ message GetHerdListRequest {
   int32 limit = 1;
   int32 page = 2;
   string search = 3;
+  string account_id = 4;
 }
 
 message GetHerdListResponse {
