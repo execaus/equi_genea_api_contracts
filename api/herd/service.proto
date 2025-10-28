@@ -13,6 +13,7 @@ service HerdService {
 message CreateHerdRequest {
   string name = 1;
   optional string description = 2;
+  string account_id = 3;
 }
 
 message CreateHerdResponse {
