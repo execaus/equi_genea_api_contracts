@@ -8,6 +8,7 @@ import "api/herd/models.proto";
 
 service HerdService {
   rpc CreateHerd(CreateHerdRequest) returns (CreateHerdResponse);
+  rpc GetHerdList(GetHerdListRequest) returns (GetHerdListResponse);
 }
 
 message CreateHerdRequest {
@@ -18,4 +19,14 @@ message CreateHerdRequest {
 
 message CreateHerdResponse {
   models.Herd herd = 1;
+}
+
+message GetHerdListRequest {
+  int32 limit = 1;
+  int32 page = 2;
+  string search = 3;
+}
+
+message GetHerdListResponse {
+  repeated models.Herd herds = 1;
 }
