@@ -29,4 +29,5 @@ message GetHerdListRequest {
 
 message GetHerdListResponse {
   repeated models.Herd herds = 1;
+  int32 total_count = 2;
 }
