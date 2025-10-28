@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package herd;
+
+option go_package = "api/herd;herd";
+
+import "api/herd/models.proto";
+
+service HerdService {
+  rpc CreateHerd(CreateHerdRequest) returns (CreateHerdResponse);
+}
+
+message CreateHerdRequest {
+  string name = 1;
+  optional string description = 2;
+}
+
+message CreateHerdResponse {
+  models.Herd herd = 1;
+}
