@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package horse;
 
-option go_package = "api/horse;horse";
+option go_package = "api/horse;horsepb";
 
 service HorseService {
   rpc CreateGender(CreateGenderRequest) returns (CreateGenderResponse);
