@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+package models;
+
+option go_package = "api/horse;horse";
+
