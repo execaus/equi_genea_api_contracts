@@ -9,6 +9,7 @@ import "api/herd/models.proto";
 service HerdService {
   rpc CreateHerd(CreateHerdRequest) returns (CreateHerdResponse);
   rpc GetHerdList(GetHerdListRequest) returns (GetHerdListResponse);
+  rpc GetHerdById(GetHerdByIdRequest) returns (GetHerdByIdResponse);
 }
 
 message CreateHerdRequest {
@@ -31,4 +32,12 @@ message GetHerdListRequest {
 message GetHerdListResponse {
   repeated models.Herd herds = 1;
   int32 total_count = 2;
+}
+
+message GetHerdByIdRequest {
+  string id = 1;
+}
+
+message GetHerdByIdResponse {
+  models.Herd herd = 1;
 }
