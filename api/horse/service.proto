@@ -2,12 +2,15 @@ syntax = "proto3";
 
 package horse;
 
+import "google/protobuf/empty.proto";
+
 option go_package = "api/horse;horsepb";
 
 import "api/horse/models.proto";
 
 service HorseService {
   rpc CreateGender(CreateGenderRequest) returns (CreateGenderResponse);
+  rpc GetGenderList(google.protobuf.Empty) returns (GetGenderListResponse);
 }
 
 message CreateGenderRequest {
@@ -17,4 +20,8 @@ message CreateGenderRequest {
 
 message CreateGenderResponse {
   models.HorseGender horse_gender = 1;
+}
+
+message GetGenderListResponse {
+  repeated models.HorseGender genders = 1;
 }
