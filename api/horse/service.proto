@@ -11,6 +11,7 @@ import "api/horse/models.proto";
 service HorseService {
   rpc CreateGender(CreateGenderRequest) returns (CreateGenderResponse);
   rpc GetGenderList(google.protobuf.Empty) returns (GetGenderListResponse);
+  rpc GetColorList(google.protobuf.Empty) returns (GetColorListResponse);
 }
 
 message CreateGenderRequest {
@@ -24,4 +25,8 @@ message CreateGenderResponse {
 
 message GetGenderListResponse {
   repeated models.HorseGender genders = 1;
+}
+
+message GetColorListResponse {
+  repeated models.HorseColor colors = 1;
 }

@@ -9,3 +9,9 @@ message HorseGender {
   string name = 2;
   optional string description = 3;
 }
+
+message HorseColor {
+  string id = 1;
+  string name = 2;
+  optional string description = 3;
+}
