@@ -38,5 +38,5 @@ message GetBirthplaceListResponse {
 }
 
 message GetGeneticMarkerListResponse {
-  repeated models.HorseGeneticMarker mearkers = 1;
+  repeated models.HorseGeneticMarker markers = 1;
 }
