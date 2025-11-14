@@ -27,3 +27,9 @@ message HorseGeneticMarker {
   string name = 2;
   optional string description = 3;
 }
+
+message HorseBreed {
+  string id = 1;
+  string name = 2;
+  optional string description = 3;
+}

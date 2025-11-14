@@ -14,6 +14,7 @@ service HorseService {
   rpc GetColorList(google.protobuf.Empty) returns (GetColorListResponse);
   rpc GetBirthplaceList(google.protobuf.Empty) returns (GetBirthplaceListResponse);
   rpc GetGeneticMarkerList(google.protobuf.Empty) returns (GetGeneticMarkerListResponse);
+  rpc GetBreedList(google.protobuf.Empty) returns (GetBreedListResponse);
 }
 
 message CreateGenderRequest {
@@ -39,4 +40,8 @@ message GetBirthplaceListResponse {
 
 message GetGeneticMarkerListResponse {
   repeated models.HorseGeneticMarker markers = 1;
+}
+
+message GetBreedListResponse {
+  repeated models.HorseBreed breeds = 1;
 }
